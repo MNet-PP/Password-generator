@@ -1,8 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Belanosima', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Belanosima", sans-serif;
 }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6582db;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px 25px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .password-box {
+  position: relative;
+  height: 50px;
+}
+
+.password-box .input-password {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  padding: 0 45px 0 15px;
+  border: 1px solid #aaa;
+  background-color: transparent;
+}
+
+.password-box .copy-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #808080;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.copy-icon:hover {
+  color: #1265c4;
+}
+
+.range-box {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.range-box .input-range {
+  width: 100%;
+  height: 5px;
+  accent-color: #6582db;
+  cursor: pointer;
+}
+
+.range-box .slider-number {
+  min-width: 30px;
+  text-align: right;
+  font-size: 17px;
+  color: #707070;
+}
+
+.wrapper .generate-button {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 0;
+  margin-top: 20px;
+  background-color: #6582db;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.generate-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0.1);
+  background-color: #fff;
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: -1;
+}
+
+.generate-button:hover {
+    background-color: #fff;
+    color: #1ed760;
+    box-shadow: 0 0 20px #1ed760;
+}
+
+.generate-button:hover::before {
+    transform: scaleY(1);
+    opacity: 0.8;
+}
+
